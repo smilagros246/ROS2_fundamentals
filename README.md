@@ -21,9 +21,7 @@ Luego, instala las dependencias necesarias para los paquetes:
 
      ```bash
      sudo apt update
-     sudo apt install ros-humble-desktop 
-     sudo apt install python3-colcon-common-extensions python3-pip
-     sudo apt install libyaml-cpp-dev  # Dependencia para C++
+     sudo apt install ros-humble-cv-bridge
      sudo apt install python3-opencv
   2. **Instalar YOLOv8 (si no lo tienes instalado):**
 
