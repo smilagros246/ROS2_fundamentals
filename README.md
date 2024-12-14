@@ -2,7 +2,7 @@
 
 Este es un proyecto que contiene dos paquetes en Python y C++ con nodos que cubren los fundamentos del uso de ROS2.
 
-- **prueba_robotics4_0**: Paquete de Python con nodos para ejecutar comunicación publicador/suscriptor, manejo de parámetros e integración de detección de objetos usando YOLOv8 con el repositorio para robots cuadrúpedos [CHAMP](https://github.com/chvmp/champ/tree/ros2).
+- **prueba_robotics4_0**: Paquete de Python con nodos para ejecutar comunicación publicador/suscriptor, manejo de parámetros e integración de detección de objetos usando YOLOv8 con el repositorio para robots cuadrúpedos [CHAMP](https://github.com/smilagros246/champ.git). 
 - **prueba_robotics4_0cpp**: Paquete de C++ con nodos para ejecutar publicación e interfaz de servicios.
 
 ## Cómo instalar
@@ -57,16 +57,16 @@ Primero, asegúrate de que tu entorno esté correctamente configurado:
 Luego, corre el nodo de Python (por ejemplo, el de prueba_robotics4_0):
 
     ros2 run prueba_robotics4_0 <nombre_del_nodo>
-Los nombres disponibles son color_detection   object_detection    publicador    suscriptor    turtle_mover  
+Los nombres disponibles son color_detection, object_detection, publicador, suscriptor, turtle_mover  
 Ejecutar los nodos de C++:
 
 De manera similar, puedes ejecutar los nodos en C++:
 
     ros2 run prueba_robotics4_0cpp <nombre_del_nodo_cpp>
-Los nombres disponibles son number_publisher    service_client    service_server   
+Los nombres disponibles son number_publisher, service_client, service_server   
 Asegúrate de reemplazar <nombre_del_nodo> o <nombre_del_nodo_cpp> por el nombre del nodo que deseas ejecutar, según corresponda.
 
 ### Requisitos
-ROS Humble (Recomendado: versión oficial estable de ROS 2).
-Python 3.10.12 o superior.
+- ROS Humble (Recomendado: versión oficial estable de ROS 2).
+- Python 3.10.12 o superior.
 
