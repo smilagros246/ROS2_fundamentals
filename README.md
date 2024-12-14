@@ -33,17 +33,31 @@ Para la detección de objetos con YOLOv8, puedes seguir los pasos de instalació
     pip install ultralytics
 
 ### Paso 2: Compilar los paquetes
+Antes de continuar, asegúrate de tener un **ROS 2 workspace** configurado. Si no tienes uno, crea el workspace siguiendo estos pasos:
+
+1. Crea el directorio del workspace:
+
+   ```bash
+   mkdir -p ~/ros2_ws/src
+   cd ~/ros2_ws
 
 Clona el repositorio y navega a la carpeta del proyecto:
   
+    cd ~/ros2_ws/src
     git clone https://github.com/smilagros246/ROS2_fundamentals.git
-    cd ROS2_fundamentals
+    cd ~/ros2_ws
   
 Asegúrate de que todos los submódulos estén correctamente inicializados:
 
+    cd ~/ros2_ws/src/ROS2_fundamentals
     git submodule update --init --recursive
-Luego, construye los paquetes usando colcon:
 
+Para usar la detección de objetos asegurate de cambiar esta linea en el archivo object_detection_node.py por la ruta de tu PC
+  
+    self.model = YOLO("/home/tu_usuario/tuWorkspace_ws/src/prueba_robotics4_0/prueba_robotics4_0/yolov8n.pt")
+Luego, construye los paquetes usando colcon desde cd ros2_ws:
+
+    cd ~/ros2_ws
     colcon build --symlink-install
 Después de que la compilación se complete correctamente, fuente el entorno de trabajo:
 
